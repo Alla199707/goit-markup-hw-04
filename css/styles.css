@@ -50,6 +50,7 @@ p {
 }
 ul {
   margin: 0;
+  padding-left: 0;
 }
 img {
   display: block;
@@ -148,13 +149,21 @@ img {
   margin-left: 50px;
 }
 .header-contact-link .links-contacts {
-  padding-bottom: 32px;
-  padding-top: 32px;
+  /* padding-bottom: 32px;
+  padding-top: 32px; */
 
   color: var(--owner-text-color);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  /* color: inherit; */
+  display: flex;
+  align-items: center;
+  /* fill: var(--owner-text-color); */
+}
+.header-contact-icon {
+  fill: currentColor;
+  margin-right: 10px;
 }
 .links-contacts:hover,
 .links-contacts:focus {
@@ -172,6 +181,14 @@ img {
   padding-bottom: 200px;
   text-align: center;
   background-color: var(--background-footer-color);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(/images/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* background: rgba(47, 48, 58, 0.4); */
+
+  top: 80px;
 }
 .hero-title {
   max-width: 696px;
@@ -220,10 +237,30 @@ img {
 }
 .advantages-item {
   max-width: 270px;
-  /* flex-basis: 270px; */
-  /* margin-left: 30px; */
 }
 
+.advantages-item::before {
+  display: block;
+  content: '';
+  height: 120px;
+  /* background-size: contain; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--buttons-port-color);
+  margin-bottom: 30px;
+}
+.icon-antenna::before {
+  background-image: url(/images/antenna.svg);
+}
+.icon-clock::before {
+  background-image: url(/images/clock.svg);
+}
+.icon-diagram::before {
+  background-image: url(/images/diagram.svg);
+}
+.icon-astronaut::before {
+  background-image: url(/images/astronaut.svg);
+}
 .advantages-item:first-child {
   margin-left: 0;
 }
@@ -264,6 +301,40 @@ img {
   /* flex-wrap: wrap; */
   /* gap: 30px; */
 }
+
+.profession-name {
+  margin-bottom: 16px;
+}
+
+.team-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+}
+
+.team-soc-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--icon-color);
+  /* fill: var(--icon-color); */
+}
+
+.team-soc-icon {
+  fill: currentColor;
+}
+
+.team-soc-link:hover,
+.team-soc-link:focus {
+  background-color: var(--accent-color);
+  color: var(--secondory-white-color);
+}
+
 .our-team-item:not(:last-child) {
   margin-right: 30px;
 }
@@ -291,6 +362,42 @@ img {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+}
+/* ------------------Постоянные клиенты------------------------ */
+.regular-customers-list {
+  display: flex;
+  gap: 30px;
+  min-width: 100%;
+  justify-content: center;
+}
+
+.regular-customers-item {
+  width: calc((100% - 150px + 12px) / 6);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.clients-link {
+  /* width: calc(100%); */
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  fill: var(--icon-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clients-icon {
+  /* fill: currentColor; */
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
 }
 /* ------------------Страница портфолио-------------------- */
 /*------------------- Секция проектов---------------------  */
@@ -364,6 +471,49 @@ img {
   line-height: 1.88;
 }
 /* -----------------------page-footer-------------------- */
+.page-footer .container {
+  display: flex;
+  align-items: baseline;
+}
+.footer-social {
+  display: block;
+  width: 206px;
+  margin-left: 70px;
+}
+.footer-social-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--secondory-white-color);
+  margin-bottom: 20px;
+}
+.footer-soc-list {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.footer-soc-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--secondory-white-color);
+}
+.footer-soc-link {
+  color: currentColor;
+}
+
+.footer-soc-link:hover,
+.footer-soc-link:active {
+  background-color: var(--accent-color);
+}
+
 .page-footer {
   padding: 60px 0;
   background-color: var(--background-footer-color);
