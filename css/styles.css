@@ -509,7 +509,7 @@ img {
 }
 
 .footer-soc-link:hover,
-.footer-soc-link:active {
+.footer-soc-link:focus {
   background-color: var(--accent-color);
 }
 
