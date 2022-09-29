@@ -187,7 +187,9 @@ img {
   background-position: center;
   background-size: cover;
 
-  top: 80px;
+  max-width: 1600px;
+  height: 600px;
+  margin: 0 auto;
 }
 .hero-title {
   max-width: 696px;
@@ -247,6 +249,7 @@ img {
   background-repeat: no-repeat;
   background-color: var(--buttons-port-color);
   margin-bottom: 30px;
+  border-radius: 4px;
 }
 .icon-antenna::before {
   background-image: url(../images/antenna.svg);
@@ -366,15 +369,14 @@ img {
 .regular-customers-list {
   display: flex;
   gap: 30px;
-  min-width: 100%;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .regular-customers-item {
   width: calc((100% - 150px + 12px) / 6);
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  /* justify-content: center;
+  flex-wrap: wrap; */
 }
 
 .clients-link {
@@ -442,8 +444,14 @@ img {
 }
 .projects-item {
   width: calc(100%-60px) / 3;
-  /* margin-right: 30px;
-  margin-bottom: 30px; */
+}
+.portfolio-item-link {
+  display: block;
+}
+.portfolio-item-link:hover,
+.portfolio-item-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 /* .projects-item:nth-child(3n) {
   margin-right: 0;
@@ -477,8 +485,8 @@ img {
   align-items: baseline;
 }
 .footer-social {
-  display: block;
-  width: 206px;
+  /* display: block;
+  width: 206px; */
   margin-left: 70px;
 }
 .footer-social-title {
